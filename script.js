@@ -64,35 +64,69 @@
 // console.log(grade>80 ? "A" : "B");
 
 //switch case
-let x;
-switch(x){
-    case 1:
-        console.log("x is 1");
-        break;  
-    case 2:
-        console.log("x is 2");
-        break;
-    case 3:
-        console.log("x is 3");
-        break;
-    default:
-        console.log("x is not 1, 2 or 3");
+// let x;
+// switch(x){
+//     case 1:
+//         console.log("x is 1");
+//         break;  
+//     case 2:
+//         console.log("x is 2");
+//         break;
+//     case 3:
+//         console.log("x is 3");
+//         break;
+//     default:
+//         console.log("x is not 1, 2 or 3");
+// }
+
+// switch (x){
+//     case 1:
+//         console.log("1");
+//         break;
+//     case 2:
+//         console.log("2");
+//         break;
+//     case 3:
+//         console.log("3");
+//         break;
+//     case 4:
+//         console.log("4");
+//         break;
+//     default:
+//         console.log("number not found");
+
+// }
+
+//Loops
+//for loop
+// for (let i = 0; i < 5; i++) {
+//     console.log(i);
+// }
+
+//while loop
+// let x= 22;
+// while (x<28) {
+//     console.log(x);
+//     x++;
+// }
+
+//do while loop
+// let x = 22;
+// do {
+//     console.log(x);
+//     x++;
+// } while (x < 28);
+
+// function display() {
+//     let x = 10;
+//     console.log(x);
+//     return x;
+// }
+
+//parameters vs arguments : parameters are variables that are defined in the function definition, while arguments are the values that are passed to the function when it is called.
+
+function multiply(a, b) {
+    return a * b;
 }
 
-switch (x){
-    case 1:
-        console.log("1");
-        break;
-    case 2:
-        console.log("2");
-        break;
-    case 3:
-        console.log("3");
-        break;
-    case 4:
-        console.log("4");
-        break;
-    default:
-        console.log("number not found");
-        
-}
+console.log(multiply(5, 10));
