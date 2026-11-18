@@ -141,43 +141,43 @@
 
 //Write a js func that accepts a no as a parameter and checks whether the number is +ve or not
 
-function checkPositive(num) {
-    if (num > 0) {
-        return "The number is positive.";
-    } else if (num < 0) {
-        return "The number is negative.";
-    } else {
-        return "The number is zero.";
-    }
-}   
-console.log(checkPositive(5)); // "The number is positive."
-console.log(checkPositive(-3)); // "The number is negative."
-console.log(checkPositive(0)); // "The number is zero."
+// function checkPositive(num) {
+//     if (num > 0) {
+//         return "The number is positive.";
+//     } else if (num < 0) {
+//         return "The number is negative.";
+//     } else {
+//         return "The number is zero.";
+//     }
+// }   
+// console.log(checkPositive(5)); // "The number is positive."
+// console.log(checkPositive(-3)); // "The number is negative."
+// console.log(checkPositive(0)); // "The number is zero."
 
-//Write a js function to find the largest number in an array given as a parameter using arrow function
+// //Write a js function to find the largest number in an array given as a parameter using arrow function
 
-var largest= (arr) => {
-    let max = arr[0];
-    for (let i = 1; i < arr.length; i++) {
-        if (arr[i] > max) {
-            max = arr[i];
-        }
-    }
-    return max;
-}   
+// var largest= (arr) => {
+//     let max = arr[0];
+//     for (let i = 1; i < arr.length; i++) {
+//         if (arr[i] > max) {
+//             max = arr[i];
+//         }
+//     }
+//     return max;
+// }   
 
-console.log(largest([1, 2, 3, 4, 5])); // 5
+// console.log(largest([1, 2, 3, 4, 5])); // 5
 
-var largest2= (arr) => {
-    let max=arr[0];
-    for (let i=1; i<arr.length; i++){
-        if (arr[i]>max){
-            max= arr[i];
-        }
-    }
-    return max;
-}
- console.log(largest2([2,4,7,9,12,3])); // 12
+// var largest2= (arr) => {
+//     let max=arr[0];
+//     for (let i=1; i<arr.length; i++){
+//         if (arr[i]>max){
+//             max= arr[i];
+//         }
+//     }
+//     return max;
+// }
+//  console.log(largest2([2,4,7,9,12,3])); // 12
 
 
  //spread operator is used to expand an iterable (like an array or string) into individual elements. It allows you to easily copy, merge, or manipulate arrays and objects.
@@ -195,3 +195,17 @@ var largest2= (arr) => {
 // }
 // largest(arr);
 
+
+//Objects in JS are collections of key-value pairs, where each key is a string (or symbol) and each value can be any data type, including other objects or functions. Objects are used to store and organize data in a structured way.
+let person={
+    name:"Nabina",
+    address:"Kathmandu",
+    age:21,
+    isStudent:true,
+};
+person.mother_name="Niru";//adding new property to the object
+console.log(person.age)
+person.address="Lalitpur";//updating the value of a property
+console.log(person.address);
+delete person.isStudent;//deleting a property from the object
+console.log(person);
