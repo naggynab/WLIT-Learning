@@ -197,15 +197,60 @@
 
 
 //Objects in JS are collections of key-value pairs, where each key is a string (or symbol) and each value can be any data type, including other objects or functions. Objects are used to store and organize data in a structured way.
-let person={
+// let person={
+//     name:"Nabina",
+//     address:"Kathmandu",
+//     age:21,
+//     isStudent:true,
+// };
+// person.mother_name="Niru";//adding new property to the object
+// console.log(person.age)
+// person.address="Lalitpur";//updating the value of a property
+// console.log(person.address);
+// delete person.isStudent;//deleting a property from the object
+// console.log(person);
+
+//this keyword in JS refers to the object that is currently executing the code. It can refer to different objects depending on the context in which it is used. In a method, this refers to the object that owns the method. In a function, this refers to the global object (in non-strict mode) or undefined (in strict mode). In an event handler, this refers to the element that received the event.
+let person1={//person1->object
     name:"Nabina",
     address:"Kathmandu",
     age:21,
     isStudent:true,
+    greet:function(){
+        console.log("Hello, my name is "+ this.name);
+    }
 };
-person.mother_name="Niru";//adding new property to the object
-console.log(person.age)
-person.address="Lalitpur";//updating the value of a property
-console.log(person.address);
-delete person.isStudent;//deleting a property from the object
-console.log(person);
+person1.greet();//Hello, my name is Nabina
+// greet().apply(person1);//Hello, my name is Nabina
+
+
+///WAP to find area of a square and a rectangle using js objects with a common area function.
+// let square={
+//     side:5,
+//     area:function(){
+//         return this.side*this.side;
+//     }
+// };
+// let rectangle={
+//     length:5,
+//     width:3,
+//     area:function(){
+//         return this.length*this.width;
+//     }
+// };
+// console.log(square.area());
+// console.log(rectangle.area());
+
+let square={
+	side:5,
+	area: function(){
+		console.log(this.side*this.side); }}
+
+let rectangle={
+	length: 12,
+	breadth:8,
+	area: function(){
+		console.log(this.length*this.width);}}
+
+square.area();
+rectangle.area();
