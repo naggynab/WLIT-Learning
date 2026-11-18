@@ -1,3 +1,6 @@
 javascript engine -> V8, SpiderMonkey
 
 shift_alt_down -> copied down
+
+ctrl + D -> for numbers select or words of down
+ctrl + / -> for commenting

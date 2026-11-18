@@ -50,15 +50,49 @@
 // // unary -> i++
 // //binary -> i + 1
 
-let grade = 80
-if ((grade >= 90) && (grade <= 100)) {
-    console.log("Grade: A");
-} else if ((grade >= 80) && (grade < 90)) {
-    console.log("Grade: B");
-} else if ((grade >= 70) && (grade < 80)) {
-    console.log("Grade: C");
-} else {
-    console.log("Grade: D");
+// let grade = 80
+// if ((grade >= 90) && (grade <= 100)) {
+//     console.log("Grade: A");
+// } else if ((grade >= 80) && (grade < 90)) {
+//     console.log("Grade: B");
+// } else if ((grade >= 70) && (grade < 80)) {
+//     console.log("Grade: C");
+// } else {
+//     console.log("Grade: D");
+// }
+
+// console.log(grade>80 ? "A" : "B");
+
+//switch case
+let x;
+switch(x){
+    case 1:
+        console.log("x is 1");
+        break;  
+    case 2:
+        console.log("x is 2");
+        break;
+    case 3:
+        console.log("x is 3");
+        break;
+    default:
+        console.log("x is not 1, 2 or 3");
 }
 
-console.log(grade>80 ? "A" : "B");
+switch (x){
+    case 1:
+        console.log("1");
+        break;
+    case 2:
+        console.log("2");
+        break;
+    case 3:
+        console.log("3");
+        break;
+    case 4:
+        console.log("4");
+        break;
+    default:
+        console.log("number not found");
+        
+}
