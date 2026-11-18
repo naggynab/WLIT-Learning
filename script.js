@@ -178,3 +178,20 @@ var largest2= (arr) => {
     return max;
 }
  console.log(largest2([2,4,7,9,12,3])); // 12
+
+
+ //spread operator is used to expand an iterable (like an array or string) into individual elements. It allows you to easily copy, merge, or manipulate arrays and objects.
+
+//spread operator in array
+// let arr1 = [1, 2, 3];
+// let arr2 = [...arr1, 4, 5, 6];
+// console.log(arr2); // [1, 2, 3, 4, 5, 6]
+
+
+// let arr = [1, 2, 3];
+// let lar = arr[0];
+// var largest = (arr) => {
+//     console.log(Math.max(...arr));
+// }
+// largest(arr);
+
