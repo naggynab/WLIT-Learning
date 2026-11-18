@@ -125,8 +125,56 @@
 
 //parameters vs arguments : parameters are variables that are defined in the function definition, while arguments are the values that are passed to the function when it is called.
 
-function multiply(a, b) {
-    return a * b;
-}
+// function multiply(a, b) {
+//     return a * b;
+// }
 
-console.log(multiply(5, 10));
+// console.log(multiply(5, 10));
+
+// var y= multiply(5, 10);
+// console.log(y);
+
+
+//arrow function
+// const multiply = (a, b) => a * b;
+// console.log(multiply(5, 10));
+
+//Write a js func that accepts a no as a parameter and checks whether the number is +ve or not
+
+function checkPositive(num) {
+    if (num > 0) {
+        return "The number is positive.";
+    } else if (num < 0) {
+        return "The number is negative.";
+    } else {
+        return "The number is zero.";
+    }
+}   
+console.log(checkPositive(5)); // "The number is positive."
+console.log(checkPositive(-3)); // "The number is negative."
+console.log(checkPositive(0)); // "The number is zero."
+
+//Write a js function to find the largest number in an array given as a parameter using arrow function
+
+var largest= (arr) => {
+    let max = arr[0];
+    for (let i = 1; i < arr.length; i++) {
+        if (arr[i] > max) {
+            max = arr[i];
+        }
+    }
+    return max;
+}   
+
+console.log(largest([1, 2, 3, 4, 5])); // 5
+
+var largest2= (arr) => {
+    let max=arr[0];
+    for (let i=1; i<arr.length; i++){
+        if (arr[i]>max){
+            max= arr[i];
+        }
+    }
+    return max;
+}
+ console.log(largest2([2,4,7,9,12,3])); // 12
