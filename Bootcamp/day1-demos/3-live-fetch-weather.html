@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Live REST URL & Fetch Explorer</title>
+  <style>
+    body { background: #0f172a; color: #f8fafc; font-family: system-ui, sans-serif; padding: 2rem; max-width: 780px; margin: 0 auto; }
+    h2 { margin-bottom: 0.5rem; }
+    p { color: #94a3b8; margin-bottom: 1.5rem; }
+    .btn-group { display: flex; flex-wrap: wrap; gap: 0.75rem; margin-bottom: 1.25rem; }
+    button { padding: 10px 16px; font-size: 14px; font-weight: 600; border: none; border-radius: 8px; cursor: pointer; color: #0f172a; }
+    .btn-blue { background: #38bdf8; }   /* Resource Endpoint */
+    .btn-yellow { background: #fbbf24; } /* Path Parameter */
+    .btn-green { background: #34d399; }  /* Query Parameter */
+    .btn-purple { background: #c084fc; } /* Weather Query Demo */
+    .url-bar { background: #1e293b; border: 1px solid #334155; padding: 0.85rem 1rem; border-radius: 8px; font-family: monospace; font-size: 15px; margin-bottom: 1rem; }
+    pre { background: #1e293b; border: 1px solid #334155; padding: 1rem; border-radius: 8px; max-height: 360px; overflow-y: auto; font-size: 14px; }
+  </style>
+</head>
+<body>
+
+  <h2>Live REST URL Anatomy Explorer</h2>
+  <p>Click each button to see how the URL changes and inspect the live JSON response:</p>
+
+  <div class="btn-group">
+    <button class="btn-blue" onclick="runDemo('https://jsonplaceholder.typicode.com/todos')">
+      1. Resource (/todos)
+    </button>
+    <button class="btn-yellow" onclick="runDemo('https://jsonplaceholder.typicode.com/todos/1')">
+      2. Path Param (/todos/1)
+    </button>
+    <button class="btn-green" onclick="runDemo('https://jsonplaceholder.typicode.com/todos?completed=false')">
+      3. Query Param (?completed=false)
+    </button>
+    <button class="btn-purple" onclick="runDemo('https://api.open-meteo.com/v1/forecast?latitude=27.7172&longitude=85.3240&current_weather=true')">
+      4. Live Kathmandu Weather
+    </button>
+  </div>
+
+  <div class="url-bar" id="url-display">GET — Click a button above to fire a request...</div>
+  <pre id="output">Waiting for request...</pre>
+
+  <script>
+    const urlDisplay = document.getElementById("url-display");
+    const output = document.getElementById("output");
+
+    async function runDemo(url) {
+      urlDisplay.textContent = "GET " + url;
+      output.textContent = "Fetching live data...";
+
+      try {
+        const response = await fetch(url);
+        if (!response.ok) throw new Error("HTTP Error: " + response.status);
+
+        const data = await response.json();
+        // If it's a huge array, show total count + first 3 items so it's easy to read on projector
+        if (Array.isArray(data)) {
+          output.textContent = `// Returned ${data.length} items (showing first 3):\n` + JSON.stringify(data.slice(0, 3), null, 2);
+        } else {
+          output.textContent = JSON.stringify(data, null, 2);
+        }
+      } catch (err) {
+        output.textContent = "Error: " + err.message;
+      }
+    }
+  </script>
+</body>
+</html>
