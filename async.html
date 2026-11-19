@@ -1,0 +1,31 @@
+<html>
+    <head>
+        <title>Async JavaScript</title>
+    </head>
+    <body>
+        <h1>Async JavaScript</h1>
+        <p>This is a simple async JavaScript example.</p>   
+        <Script>
+              let result = function(score){
+                return new Promise (function (resolve,reject){
+                    console.log("Calculation Results...")
+                    if (score >= 50){
+                        resolve("You have passed the exam");
+                    } else {
+                        reject("You have failed the exam");
+                    }
+                })
+              }
+              let grade = function(response){
+                return new Promise(function(Resolve,reject){
+                    console.log("Calculating your grade ...")
+                    resolve("Your grade is A" +response)
+
+                })
+              }result(80).then(response=>{
+                console.log(response);
+
+              }).then
+        </Script>
+    </body>
+</html>

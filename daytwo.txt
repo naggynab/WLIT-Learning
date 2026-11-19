@@ -4,3 +4,5 @@ shift_alt_down -> copied down
 
 ctrl + D -> for numbers select or words of down
 ctrl + / -> for commenting
+
+regxr.com
