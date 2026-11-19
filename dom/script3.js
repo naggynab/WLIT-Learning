@@ -22,3 +22,6 @@ const title=document.querySelector("#heading");
 console.log(title.getAttribute("id"));
 
 li.remove();
+
+
+//Events are actions that occur when the user interacts with the page.

@@ -1,33 +1,50 @@
 body {
   background-color: #f2efe7;
-  font-family: "Courier New";
+  font-family: "Courier New", monospace;
 }
-​
+
 .container {
+  border: 2px solid #006a71;
   width: fit-content;
   padding: 20px;
+  border-radius: 20px;
   margin: 50px auto;
 }
-​
-.box {
-  border: 2px solid #006a71;
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  justify-content: center;
-  align-items: center;
+
+#heading {
+  color: #006a71;
   text-align: center;
-  margin: 20px;
-  padding: 10px;
+  font-size: 2.5em;
+  font-weight: 600;
 }
-​
+
 .box {
-  cursor: pointer;
+  margin: 10px 0;
+  padding: 10px;
+  border-radius: 8px;
+  background-color: #9acbd0;
   color: #1e0342;
-  transition: background-color 0.3s ease;
 }
-​
-.box:hover {
+
+.box:hover,
+.box:focus {
+  background-color: #006a71;
+  color: white;
+  outline: none;
+}
+
+.textInput {
+  border: 2px solid #006a71;
+  font-family: inherit;
+  font-size: 1rem;
+}
+
+button {
+  margin: 10px auto;
+  cursor: pointer;
   background-color: #006a71;
   color: #fff;
+  border-radius: 8px;
+  padding: 10px;
+  border: none;
 }
