@@ -3,7 +3,11 @@ console.log("1. Customer orders Momo");
 // Handed off to the background timer (doesn't block the line!)
 setTimeout(() => {
   console.log("2. Momo is steamed and served! (Took 2 seconds)");
-}, 2000);
+}, 2000);//this comes at last here
+
+setTimeout(() => {
+  console.log("2. Momo is steamed and served! (Took 0 seconds)");
+}, 0);// this comes at third
 
 console.log("3. Cashier takes the next customer's order immediately");
 
