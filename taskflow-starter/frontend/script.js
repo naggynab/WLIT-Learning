@@ -2,10 +2,10 @@
 // 1. CONFIGURATION & API ENDPOINT
 // ============================================================================
 // DAY 1: Uses free public mock API (simulates writes, resets on page refresh)
-const API_URL = "https://jsonplaceholder.typicode.com/todos";
+// const API_URL = "https://jsonplaceholder.typicode.com/todos";
 
 // DAY 2: Comment out the line above and uncomment below to connect to your Express server!
-// const API_URL = "http://localhost:3000/api/tasks";
+const API_URL = "http://localhost:3000/api/tasks";
 
 
 // ============================================================================

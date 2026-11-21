@@ -1,0 +1,50 @@
+<!-- Task 2: 
+Create a web page that does the following:
+
+1.Displays a form that asks for:
+o Text color (e.g., red, blue, #ff0000).
+o Background color (e.g., white, black, #ffffff).
+o The content of the text (e.g., "Hello, World!").
+2.When the user submits the form:
+o The page should display the text below the form with the user's chosen text color, background color, and text content. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment 2</title>
+</head>
+<body>
+    <form id="colorForm">
+        <label for="textColor">Text Color:</label>
+        <input type="text" id="textColor" name="textColor" placeholder="Enter text color"><br><br>
+
+        <label for="bgColor">Background Color:</label>
+        <input type="text" id="bgColor" name="bgColor" placeholder="Enter background color"><br><br>
+
+        <label for="content">Text Content:</label>
+        <input type="text" id="content" name="content" placeholder="Enter text content"><br><br>
+
+        <button type="submit">Submit</button>
+    </form>
+    <div id="output" style="margin-top: 20px;"></div>
+    <script>
+        const form = document.getElementById('colorForm');
+        const output = document.getElementById('output');
+
+        form.addEventListener('submit', (event) => {
+            event.preventDefault();
+
+            const textColor = document.getElementById('textColor').value;
+            const bgColor = document.getElementById('bgColor').value;
+            const content = document.getElementById('content').value;
+
+            output.textContent = content;
+            output.style.color = textColor;
+            output.style.backgroundColor = bgColor;
+        });
+    </script>
+    
+</body>
+</html>

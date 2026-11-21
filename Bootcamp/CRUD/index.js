@@ -98,6 +98,10 @@ app.patch("/api/tasks/:id", (req, res) => {
   if (typeof req.body.completed === "boolean") {
     task.completed = req.body.completed;
   }
+  if (typeof req.body.description === "string" && req.body.description.trim()) {
+    task.description = req.body.description.trim();
+  }
+
   if (typeof req.body.title === "string" && req.body.title.trim()) {
     task.title = req.body.title.trim();
   }

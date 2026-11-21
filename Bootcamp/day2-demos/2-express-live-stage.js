@@ -4,11 +4,12 @@ const app = express();
 
 // Middleware: Unpacks incoming JSON bodies & allows frontend requests
 app.use(cors());
-app.use(express.json());
+app.use(express.json());// parses JSON request bodies
 
 let tasks = [
-  { id: 1, title: "Learn Express Routes", completed: false },
-  { id: 2, title: "Test with Thunder Client", completed: true }
+  { id: 1, title: "Learn Express Routes testing nodemon and doing something", completed: false },
+  { id: 2, title: "Test with Thunder Client", completed: true },
+  { id: 3, title: "Test with Postman", completed: false }
 ];
 
 // ==========================================
@@ -21,20 +22,20 @@ app.get("/api/tasks", (req, res) => {
 // ==========================================
 // STAGE 2: Uncomment live to add POST (Create)
 // ==========================================
-/*
-app.post("/api/tasks", (req, res) => {
-  if (!req.body.title) {
-    return res.status(400).json({ error: "Title is required!" });
-  }
-  const newTask = {
-    id: tasks.length + 1,
-    title: req.body.title,
-    completed: false
-  };
-  tasks.push(newTask);
-  res.status(201).json(newTask);
-});
-*/
+
+// app.post("/api/tasks", (req, res) => {
+//   if (!req.body.title) {
+//     return res.status(400).json({ error: "Title is required!" });
+//   }
+//   const newTask = {
+//     id: tasks.length + 1,
+//     title: req.body.title,
+//     completed: false
+//   };
+//   tasks.push(newTask);
+//   res.status(201).json(newTask);
+// });
+
 
 // ==========================================
 // STAGE 3: Uncomment live to show .env secret

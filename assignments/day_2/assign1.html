@@ -1,0 +1,33 @@
+<!--  Task 1:
+Create a web page that does the following:
+1.Displays a heading that says: "Watch me grow!"
+2.Includes an input box where the user can enter a number (e.g., 20, 50, 100).
+3.Has a button labeled "Change Font Size".
+4.When the button is clicked, the heading's font size should
+change according to the number entered by the user (in pixels). -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment 1</title>
+</head>
+<body>
+    <heading id="heading">Watch me grow!</heading>
+    <input type="number" id="fontSizeInput" placeholder="Enter font size in pixels">
+    <button id="changeFontSize">Change Font Size</button>
+    <script>
+        const heading = document.getElementById('heading');
+        const fontSizeInput = document.getElementById('fontSizeInput');
+        const changeFontSize = document.getElementById('changeFontSize');
+
+        changeFontSize.addEventListener('click', () => {
+            const fontSize = fontSizeInput.value;
+            if (fontSize) {
+                heading.style.fontSize = `${fontSize}px`;
+            }
+        });
+    </script>
+</body>
+</html>

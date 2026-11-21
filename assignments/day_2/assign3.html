@@ -1,0 +1,35 @@
+<!-- Task 3: 
+Create a web page that:
+1.Defines an object animal with a method makeSound() that returns "Some sound".
+2.Defines another object dog with a property name: "Buddy".
+3.Uses __ proto __
+4.Logs the output of dog.makeSound() to the console. to inherit makeSound() from animal into dog. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment 3</title>
+</head>
+<body>
+    <script>
+
+        const animal = {
+            makeSound: function() {
+                return "Some sound";
+            }
+        };
+
+   
+        const dog = {
+            name: "Buddy"
+        };
+
+        dog.__proto__ = animal;
+
+        console.log(dog.makeSound());
+    </script>
+    
+</body>
+</html>
